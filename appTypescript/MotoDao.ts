@@ -1,7 +1,7 @@
 import { DaoInterface } from "./DaoInterface";
 import Moto from "./Moto";
 
-export default class MotoDao implements DaoInterface {
+export default class MotoDao implements DaoInterface<Moto> {
     nometabela: string = 'tb_Moto';    
     
     inserir(object: Moto): boolean {

@@ -1,7 +1,7 @@
 import { DaoInterface } from "./DaoInterface";
 import Carro from "./Carro";
 
-export default class CarroDao implements DaoInterface {
+export default class CarroDao implements DaoInterface<Carro> {
     nometabela: string = 'tb_Carro';    
     
     inserir(object: Carro): boolean {
