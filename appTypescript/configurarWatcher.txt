@@ -1,0 +1,5 @@
+Pra configurar o watcher
+Abra a pasta onde estará o .TS
+Execute 'tsc -init' que irá criar o arquivo tsconfig.json
+Altere o campo 'outDir' para a pasta que deseja enviar o arquivo .JS compilado a partir do .TS
+Execute 'tsc -w' para que o watcher fique executando
