@@ -5,15 +5,21 @@
         <app-progresso></app-progresso>
       </div>
       <div class="col-sm-6">
-        <app-tentativas></app-tentativas>
+        <div class="d-flex flex-row-reverse bd-highlight">
+          <app-tentativas></app-tentativas>
+        </div>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <h6>Traduza a frase:</h6>
-        <p>How are you:</p>
+        <h6>{{instrucao}}</h6>
+        <p>{{frase[0].fraseEng}}</p>
         <div class="form-group">
-          <textarea class="form-control" rows="3"></textarea>
+          <textarea 
+            class="form-control" 
+            rows="3"
+            (input)="atualizaResposta($event.target.value)"
+          ></textarea>
         </div>
       </div>
     </div>
@@ -22,7 +28,7 @@
         <div class="d-flex flex-row-reverse bd-highlight">
           <button type="button" class="btn btn-primary">Verificar</button>
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </div>
